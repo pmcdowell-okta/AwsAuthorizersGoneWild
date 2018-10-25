@@ -6,7 +6,7 @@ Everybody loves writing Authorizers. This is a sample
 of some AWS Authorizers that I use for testing.
 
 ## anythingGoesAuthorizer.js
-[anythingGoesAuthorizer]: ./anythingGoesAuthorizer.js
+[anythingGoesAuthorizer](./anythingGoesAuthorizer.js)
 
 
 Very little description required, this Authorizers lets
