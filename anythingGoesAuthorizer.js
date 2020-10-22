@@ -16,12 +16,6 @@ const generatePolicy = function(principalId, effect, resource) {
 
         statementOne.Effect = effect;
         resource = "*"
-        // resource = resource.replace(/dev/, "\*");
-        // resource = resource.replace(/GET/, "\*");
-        // resource = resource.replace(/vehicles/, "\*");
-        // resource = resource.replace(/bookings/, "\*");
-        console.log(resource)
-
         statementOne.Resource = resource;
         policyDocument.Statement[0] = statementOne;
         authResponse.policyDocument = policyDocument;
@@ -32,8 +26,6 @@ const generatePolicy = function(principalId, effect, resource) {
 exports.handler = (event, context, callback) => {
 
     console.log("Hit Authorizer")
-    console.log(event)
-
 
     callback(null, generatePolicy('user123', 'Allow', event.methodArn));
     
